@@ -1,0 +1,53 @@
+<Ui>
+	<Script file="DruidFormManaBar.lua"/>
+	<StatusBar name="DruidFormManaBarFrame" drawLayer="BORDER" toplevel="true" parent="PlayerFrameManaBar" hidden="true">
+		<Anchors>
+			<Anchor point="LEFT">
+				<Offset>
+					<AbsDimension x="2" y="-20" />
+				</Offset>
+			</Anchor>
+		</Anchors>
+
+		<Layers>
+			<Layer level="BORDER">
+				<Texture name="$parentBorder" file="Interface\Tooltips\UI-StatusBar-Border">
+					<Anchors>
+						<Anchor point="TOP">
+							<Offset>
+								<AbsDimension x="0" y="2" />
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+
+				<FontString name="$parentManaPercentage" inherits="GameFontNormalSmall" text="">
+					<Size x="30" y="17" />
+
+					<Anchors>
+						<Anchor point="RIGHT">
+							<Offset x="0" y="1" />
+						</Anchor>
+					</Anchors>
+
+					<Color r="1" g="1" b="1" a="1" />
+				</FontString>
+			</Layer>
+		</Layers>
+
+		<BarTexture file="Interface\TargetingFrame\UI-StatusBar" />
+		<BarColor r="0.0" g="0.0" b="1.0"/>
+
+		<Scripts>
+			<OnLoad>
+				DruidFormManaBar_OnLoad();
+			</OnLoad>
+			<OnEvent>
+				DruidFormManaBar_OnEvent();
+			</OnEvent>
+			<OnUpdate>
+				DruidFormManaBar_OnUpdate();
+			</OnUpdate>
+		</Scripts>
+	</StatusBar>
+</Ui>

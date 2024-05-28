@@ -1,0 +1,5 @@
+## Interface: 11200
+## Title: Druid Form Mana Bar
+## Notes: Shows mana bar when you are in your cat \ bear form
+## Author: MikeBeloborodov
+DruidFormManaBar.xml
